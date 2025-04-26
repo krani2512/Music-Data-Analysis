@@ -1,0 +1,59 @@
+# YouTube Music Data Analysis
+
+## Python Data Science Project
+
+A comprehensive analysis of YouTube music video performance across genres, artists, and time periods using Python, Pandas, Matplotlib, Seaborn, NumPy, and other data science tools.
+
+### Technologies Used
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- NumPy
+- Jupyter Notebook
+
+### Features
+- Genre performance comparison
+- Temporal trend analysis
+- Artist success metrics
+- Engagement rate calculation
+- Interactive visualizations
+
+### Dataset
+Analysis of 100 songs across 10 music genres with YouTube metrics (views, likes, dislikes) from 1680-2024.
+
+IN[]
+
+# importing the libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+from datetime import datetime
+import io
+
+Next, we read the csv file into a Pandas dataframe using the function read_csv() from the Pandas library.
+IN[]
+
+from google.colab import files
+uploaded = files.upload()  # This will show an upload button
+import pandas as pd
+import io
+
+IN[]
+
+file_name = next(iter(uploaded))
+data = pd.read_csv(io.BytesIO(uploaded["music_data.csv"]))
+IN[]
+
+# Identify the rows with problematic dates
+problematic_dates = data[data['Release Date'].isnull()]
+
+IN[]
+# Print the problematic dates and their indices
+print("Problematic Dates:")
+print(problematic_dates[['Release Date']])
+OUT[]Problematic Dates:
+Empty DataFrame
+Columns: [Release Date]
+Index: []
