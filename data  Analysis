@@ -53,7 +53,10 @@ IN[]
 # Print the problematic dates and their indices
 print("Problematic Dates:")
 print(problematic_dates[['Release Date']])
-OUT[]Problematic Dates:
+
+OUT[]
+
+Problematic Dates:
 Empty DataFrame
 Columns: [Release Date]
 Index: []
